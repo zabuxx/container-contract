@@ -55,7 +55,7 @@ Within a functional environment this command should drop you in a shell:
 
 ### Internals
 
-When launched a first time, a new container is created in the current working directory (*podman run*). This container will auto-destroy after 15min of inactivity. During this period, all commands issued within this directory, will be executed in this container (See [Caveats](#markdown-header-caveats)).
+When launched a first time, a new container is created in the current working directory (*podman run*). This container will auto-destroy after 15min of inactivity. During this period, all commands issued within this directory, will be executed in this container (See [Caveats](#caveats)).
 
 This allows for container filesystem persistency during its lifetime, and thus avoids redownloading cargo dependencies in subsequent runs from the same directory. The overhead of keeping the container running is low in terms of memory and CPU, but gives significant performance improvements in subsequent runs.
 
